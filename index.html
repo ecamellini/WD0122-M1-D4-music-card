@@ -50,7 +50,9 @@
       bottom: 0px;
       left: 0px;
       right: 0px;
+      padding: 10px;
       z-index: 3;
+      user-select: none;
     }
 
     #music-card-info_artist {
@@ -68,6 +70,32 @@
       margin-top: 8px;
       font-size: 1.3em;
       line-height: 1.5em;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    #music-card_play {
+      background-color: #27ae60;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    #music-card-play-triangle {
+      position: absolute;
+      top: 30%;
+      left: 42%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #ffffff;
     }
   </style>
 </head>
@@ -76,7 +104,10 @@
   <div id="music-card-info">
     <div id="music-card-info_artist">David Bowie</div>
     <div id="music-card-info_album">Aladdin Sane</div>
-    <div id="music-card-info_title">Watch That Man</div>
+    <div id="music-card-info_title">Let's Spend The Night Togheter</div>
+  </div>
+  <div id="music-card_play">
+    <div id="music-card-play-triangle"></div>
   </div>
 </div>
 
