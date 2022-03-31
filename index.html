@@ -53,6 +53,11 @@
       padding: 10px;
       z-index: 3;
       user-select: none;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity .3s;
+      transition: transform .3s;
+      transition-timing-function: ease-in;
     }
 
     #music-card-info_artist {
@@ -85,6 +90,11 @@
       z-index: 4;
       border-radius: 50%;
       cursor: pointer;
+      transform: translateX(-60px);
+      opacity: 0;
+      transition: opacity .3s;
+      transition: transform .3s;
+      transition-timing-function: ease-in;
     }
 
     #music-card-play-triangle {
@@ -100,6 +110,16 @@
       border-style: solid;
       border-width: 10px 0 10px 10px;
       border-color: transparent transparent transparent #ffffff;
+    }
+
+    #music-card:hover #music-card-info {
+      transform: translate(300px);
+      opacity: 0;
+    }
+
+    #music-card:hover #music-card_play {
+      transform: translateX(0px);
+      opacity: 1;
     }
   </style>
 </head>
